@@ -1,0 +1,57 @@
+{
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "Corte clásico",
+            "descripcion": "Corte tradicional con terminación a máquina y tijera.",
+            "precio": 10000,
+            "duracion": 45
+        },
+        {
+            "id": 2,
+            "nombre": "Corte + Barba",
+            "descripcion": "Corte completo acompañado de perfilado de barba.",
+            "precio": 15000,
+            "duracion": 60
+        },
+        {
+            "id": 3,
+            "nombre": "Corte Premium",
+            "descripcion": "Corte personalizado, lavado y terminación profesional.",
+            "precio": 13000,
+            "duracion": 60
+        },
+        {
+            "id": 4,
+            "nombre": "Barba",
+            "descripcion": "Perfilado y cuidado completo de barba.",
+            "precio": 7000,
+            "duracion": 30
+        }
+    ],
+
+"barberos": [
+    {
+        "id": 1,
+        "nombre": "Lucas",
+        "especialidad": "Especialista en fades"
+    },
+    {
+        "id": 2,
+        "nombre": "Juan",
+        "especialidad": "Estilo clásico"
+    },
+    {
+        "id": 3,
+        "nombre": "Martín",
+        "especialidad": "Barba y cabello"
+    },
+    {
+        "id": 4,
+        "nombre": "Fede",
+        "especialidad": "Creativo"
+    }
+]
+
+
+}

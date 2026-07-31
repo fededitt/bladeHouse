@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/productos.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="img/png" size="32x32" href="../img/logo-favicon.png">
+    <link rel="icon" type="img/png" size="16x16" href="../img/logo-favicon.png">
+
+    <title>Tienda Blade House</title>
+</head>
+<body>
+
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+
+            
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../img/logo-header.png" alt="Logo Noir Essence" class="logo-header me-2"> 
+                </a>
+
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link " aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="../pages/turnos.html">Servicios</a>
+                        <a class="nav-link active" href="../pages/productos.html">Productos</a>
+                        <a class="nav-link" href="../pages/pedidos.html">Mis Pedidos</a>
+                        <a class="nav-link" href="../pages/misTurnos.html">Mis Turnos</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>        
+
+            
+    </header>
+    <main>
+
+        <section class="productos">
+
+            <div class="productos-header">
+
+                <span>BLade House</span>
+
+                <h1>NUESTRA TIENDA</h1>
+
+                <p>
+                    Productos seleccionados para cuidar y mantener tu estilo.
+                </p>
+
+            </div>
+
+
+            <div id="productos-container" class="productos-container">
+
+            </div>
+
+        </section>
+
+                <button
+                    id="carrito-flotante"
+                    class="carrito-flotante"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#carritoOffcanvas"
+                    aria-controls="carritoOffcanvas">
+
+                    🛒
+
+                    <span id="carrito-contador" class="carrito-contador">
+                        0
+                    </span>
+
+                </button>
+
+
+        <div 
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="carritoOffcanvas"
+        aria-labelledby="carritoOffcanvasLabel">
+
+    <div class="offcanvas-header">
+
+        <h2 
+            class="offcanvas-title"
+            id="carritoOffcanvasLabel">
+
+            Mi carrito
+
+        </h2>
+
+        <button 
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar">
+        </button>
+
+        </div>
+
+
+            <div class="offcanvas-body">
+
+                    <div id="carrito-container">
+
+                        <!-- JavaScript va a colocar los productos acá -->
+
+                    </div>
+
+
+                    <div class="carrito-footer">
+
+                        <div class="carrito-total">
+
+                            <span>Total</span>
+
+                            <strong id="carrito-total">
+                                $0
+                            </strong>
+
+                        </div>
+
+
+                        <button 
+                            id="finalizar-compra"
+                            class="btn-finalizar">
+
+                            Finalizar compra
+
+                        </button>
+
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <section id="checkout" class="checkout">
+
+            <div class="checkout-container">
+
+                    <div class="checkout-header">
+
+                        <span>Blade House</span>
+
+                        <h2>Finalizar compra</h2>
+
+                        <p>
+                            Completá tus datos para continuar con tu pedido.
+                        </p>
+
+                    </div>
+
+
+                    <form id="checkout-form">
+
+                        <div class="form-group">
+
+                            <label for="nombre">
+                                Nombre
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Tu nombre"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="apellido">
+                                Apellido
+                            </label>
+
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                placeholder="Tu apellido"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="tuemail@email.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="telefono">
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="11 1234-5678"
+                                required
+                            >
+
+                        </div>
+
+                        <div id="checkout-mensaje"></div>
+                        <button
+                            type="submit"
+                            class="btn-continuar">
+
+                            Continuar
+
+                        </button>
+
+                    </form>
+
+            </div>
+
+
+
+            <div id="resumen-pedido" class="resumen-pedido">
+
+                <div class="resumen-header">
+
+                    <span>BLADE HOUSE</span>
+
+                    <h2>Revisá tu pedido</h2>
+
+                    <p>
+                        Verificá que los datos y productos sean correctos.
+                    </p>
+
+                </div>
+
+
+                <div id="resumen-productos" class="resumen-productos">
+
+                </div>
+
+
+                <div class="resumen-total">
+
+                    <span>Total</span>
+
+                    <strong id="resumen-total-precio">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <div class="resumen-botones">
+
+                    <button
+                        type="button"
+                        id="volver-checkout"
+                        class="btn-volver">
+
+                        Volver
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="confirmar-compra"
+                        class="btn-confirmar">
+
+                        Confirmar compra
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
+
+
+        <section id="compra-exitosa" class="compra-exitosa">
+
+            <div class="compra-exitosa-container">
+
+                <div class="compra-icono">
+                    ✓
+                </div>
+
+                <span>BLADE HOUSE</span>
+
+                <h2>¡COMPRA REALIZADA!</h2>
+
+                <p>
+                    Gracias por confiar en Blade House.
+                    Tu pedido fue registrado correctamente.
+                </p>
+
+                <div class="numero-pedido">
+
+                    <small>Número de pedido</small>
+
+                    <strong id="numero-pedido">
+                        BH-000000
+                    </strong>
+
+                </div>
+
+                <button
+                    id="volver-tienda"
+                    class="btn-volver-tienda">
+
+                    Volver a la tienda
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+    
+
+    <footer class="footer">
+
+    <div class="footer-contenedor">
+
+
+        <div class="footer-columna footer-marca">
+
+            <a href="../index.html" class="footer-logo">
+                <img 
+                    src="../img/logo-circulo.png"
+                    alt="Blade House"
+                >
+            </a>
+
+            <p>
+                Estilo, precisión y actitud.
+                Tu barbería de confianza.
+            </p>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>Navegación</h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/turnos.html">
+                        Reservar turno
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/productos.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/pedidos.html">
+                        Mis Pedidos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/misTurnos.html">
+                        Mis turnos
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>Contacto</h3>
+
+            <ul class="footer-contacto">
+
+                <li>
+                    <i class="bi bi-geo-alt"></i>
+                    Buenos Aires, Argentina
+                </li>
+
+                <li>
+                    <i class="bi bi-telephone"></i>
+                    +54 11 1234-5678
+                </li>
+
+                <li>
+                    <i class="bi bi-envelope"></i>
+                    contacto@bladehouse.com
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-columna footer-redes">
+
+            <h3>Seguinos</h3>
+
+            <p>
+                Encontranos en nuestras redes.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p> © 2026 Blade House. Todos los derechos reservados.</p>
+
+        <p>Diseñado y desarrollado con dedicación.</p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

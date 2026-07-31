@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+    <script src="../js/app.js" defer></script>
+    <script src="../js/turnos.js" defer></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="img/png" size="32x32" href="../img/logo-favicon.png">
+    <link rel="icon" type="img/png" size="16x16" href="../img/logo-favicon.png">
+
+    <title>Agendar Servicio</title>
+</head>
+<body>
+
+    <header>
+                <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+
+            
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <img src="../img/logo-header.png" alt="Logo Noir Essence" class="logo-header me-2"> 
+                </a>
+
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Enlaces de navegación -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link " href="../pages/turnos.html">Servicios</a>
+                        <a class="nav-link" href="../pages/productos.html">Productos</a>
+                        <a class="nav-link" href="../pages/pedidos.html">Mis Pedidos</a>
+                        <a class="nav-link" href="../pages/misTurnos.html">Mis Turnos</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>        
+
+            
+    </header>
+
+    <main>
+
+        <section class="turnos">
+
+            <div class="turnos-header">
+
+                <span>BLADE HOUSE</span>
+
+                <h1>RESERVAR TURNO</h1>
+
+                <p>
+                    Elegí el servicio, profesional y horario
+                    que mejor se adapte a vos.
+                </p>
+
+            </div>
+
+
+           
+
+            <div class="turnos-progreso">
+
+                <div class="paso activo">
+
+                    <span>1</span>
+
+                    <p>Servicio</p>
+
+                </div>
+
+
+                <div class="linea"></div>
+
+
+                <div class="paso">
+
+                    <span>2</span>
+
+                    <p>Barbero</p>
+
+                </div>
+
+
+                <div class="linea"></div>
+
+
+                <div class="paso">
+
+                    <span>3</span>
+
+                    <p>Fecha</p>
+
+                </div>
+
+
+                <div class="linea"></div>
+
+
+                <div class="paso">
+
+                    <span>4</span>
+
+                    <p>Horario</p>
+
+                </div>
+
+
+                <div class="linea"></div>
+
+
+                <div class="paso">
+
+                    <span>5</span>
+
+                    <p>Datos</p>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="turnos-contenedor">
+
+
+                
+
+                    <div
+                        id="paso-servicio"
+                        class="turno-paso activo">
+
+                        <div class="paso-header">
+
+                            <span>PASO 1</span>
+
+                            <h2>
+                                Elegí tu servicio
+                            </h2>
+
+                            <p>
+                                Seleccioná el servicio que querés realizarte.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="servicios-container"
+                            class="servicios-turno">
+
+                        </div>
+
+
+                        <div class="paso-footer">
+
+                            <button
+                                id="btn-servicio"
+                                class="btn-turno"
+                                disabled>
+
+                                Continuar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+                <!-- PASO 2 -->
+
+                <div class="turno-paso" id="paso-barbero">
+
+                    <div class="paso-header">
+
+                        <span>PASO 2</span>
+
+                        <h2>Elegí tu barbero</h2>
+
+                        <p>
+                            Seleccioná el profesional con el que querés realizarte el servicio.
+                        </p>
+
+                    </div>
+
+                    <div 
+                        id="barberos-container" 
+                        class="barberos-container">
+                    </div>
+
+                    <div class="paso-botones">
+
+                        <button 
+                            type="button"
+                            id="volver-servicio"
+                            class="btn-turno btn-secundario">
+
+                            Volver
+
+                        </button>
+
+                        <button 
+                            type="button"
+                            id="continuar-barbero"
+                            class="btn-turno btn-principal">
+
+                            Continuar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- PASO 3 -->
+
+                <div class="turno-paso" id="paso-fecha">
+
+                    <div class="paso-header">
+
+                        <span>PASO 3</span>
+
+                        <h2>Elegí la fecha</h2>
+
+                        <p>
+                            Seleccioná el día en el que querés reservar tu turno.
+                        </p>
+
+                    </div>
+
+
+                    <div class="calendario-container">
+
+                        <div class="calendario-header">
+
+                            <button
+                                type="button"
+                                id="mes-anterior"
+                                class="calendario-btn">
+
+                                ‹
+
+                            </button>
+
+                            <h3 id="mes-actual"></h3>
+
+                            <button
+                                type="button"
+                                id="mes-siguiente"
+                                class="calendario-btn">
+
+                                ›
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="calendario-semana">
+
+                            <span>Lun</span>
+                            <span>Mar</span>
+                            <span>Mié</span>
+                            <span>Jue</span>
+                            <span>Vie</span>
+                            <span>Sáb</span>
+                            <span>Dom</span>
+
+                        </div>
+
+
+                        <div
+                            id="calendario-dias"
+                            class="calendario-dias">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="paso-botones">
+
+                        <button
+                            type="button"
+                            id="volver-barbero"
+                            class="btn-turno btn-secundario">
+
+                            Volver
+
+                        </button>
+
+                        <button
+                            type="button"
+                            id="continuar-fecha"
+                            class="btn-turno btn-principal"
+                            disabled>
+
+                            Continuar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- PASO 4 -->
+
+            <div class="turno-paso" id="paso-horario">
+
+                <div class="paso-header">
+
+                    <span>PASO 4</span>
+
+                    <h2>Elegí el horario</h2>
+
+                    <p>
+                        Seleccioná el horario que preferís para tu turno.
+                    </p>
+
+                </div>
+
+
+                <div class="horarios-container" id="horarios-container">
+
+
+                </div>
+
+
+                <div class="paso-botones">
+
+                    <button
+                        type="button"
+                        id="volver-fecha"
+                        class="btn-turno btn-secundario">
+
+                        Volver
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="continuar-horario"
+                        class="btn-turno btn-principal"
+                        disabled>
+
+                        Continuar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- PASO 5 -->
+
+                <div class="turno-paso" id="paso-datos">
+
+                    <div class="paso-header">
+
+                        <span>PASO 5</span>
+
+                        <h2>Completá tus datos</h2>
+
+                        <p>
+                            Necesitamos algunos datos para confirmar tu turno.
+                        </p>
+
+                    </div>
+
+
+                    <form id="formulario-datos">
+
+                        <div class="datos-grid">
+
+                            <div class="campo-dato">
+
+                                <label for="nombre">
+                                    Nombre y apellido
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Ej: Juan Pérez"
+                                    required>
+
+                            </div>
+
+
+                            <div class="campo-dato">
+
+                                <label for="telefono">
+                                    Teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="Ej: 11 1234-5678"
+                                    required>
+
+                            </div>
+
+
+                            <div class="campo-dato">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Ej: juan@email.com"
+                                    required>
+
+                            </div>
+
+
+                            <div class="campo-dato">
+
+                                <label for="comentario">
+                                    Observaciones
+                                    <span>(opcional)</span>
+                                </label>
+
+                                <textarea
+                                    id="comentario"
+                                    name="comentario"
+                                    placeholder="¿Querés dejarnos alguna indicación?"></textarea>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="paso-botones">
+
+                            <button
+                                type="button"
+                                id="volver-horario"
+                                class="btn-turno btn-secundario">
+
+                                Volver
+
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                id="confirmar-datos"
+                                class="btn-turno btn-principal">
+
+                                Confirmar turno
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- CONFIRMACIÓN -->
+
+                        <div class="turno-paso" id="paso-confirmacion">
+
+                            <div class="paso-header">
+
+                                <span>RESERVA</span>
+
+                                <h2>Confirmá tu turno</h2>
+
+                                <p>
+                                    Revisá los datos antes de confirmar tu reserva.
+                                </p>
+
+                            </div>
+
+
+                            <div class="resumen-turno">
+
+                                <div class="resumen-item">
+
+                                    <span>Servicio</span>
+
+                                    <strong id="resumen-servicio"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Barbero</span>
+
+                                    <strong id="resumen-barbero"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Fecha</span>
+
+                                    <strong id="resumen-fecha"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Horario</span>
+
+                                    <strong id="resumen-horario"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-separador"></div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Cliente</span>
+
+                                    <strong id="resumen-nombre"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Teléfono</span>
+
+                                    <strong id="resumen-telefono"></strong>
+
+                                </div>
+
+
+                                <div class="resumen-item">
+
+                                    <span>Email</span>
+
+                                    <strong id="resumen-email"></strong>
+
+                                </div>
+
+
+                                <div
+                                    class="resumen-observacion"
+                                    id="resumen-observacion-container">
+
+                                    <span>Observaciones</span>
+
+                                    <p id="resumen-comentario"></p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="paso-botones">
+
+                                <button
+                                    type="button"
+                                    id="volver-datos"
+                                    class="btn-turno btn-secundario">
+
+                                    Volver
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    id="confirmar-reserva"
+                                    class="btn-turno btn-principal">
+
+                                    Confirmar reserva
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RESERVA CONFIRMADA -->
+
+                <div class="turno-paso" id="reserva-confirmada">
+
+                    <div class="reserva-exito">
+
+                        <div class="reserva-icono">
+                            ✓
+                        </div>
+
+                        <span>¡RESERVA CONFIRMADA!</span>
+
+                        <h2>
+                            Tu turno fue reservado correctamente
+                        </h2>
+
+                        <p>
+                            Te esperamos en Blade House.
+                        </p>
+
+                        <div class="codigo-reserva">
+
+                            <span>Código de reserva</span>
+
+                            <strong id="codigo-reserva"></strong>
+
+                        </div>
+
+                        <div class="resumen-confirmado">
+
+                            <div>
+                                <span>Servicio</span>
+                                <strong id="final-servicio"></strong>
+                            </div>
+
+                            <div>
+                                <span>Barbero</span>
+                                <strong id="final-barbero"></strong>
+                            </div>
+
+                            <div>
+                                <span>Fecha</span>
+                                <strong id="final-fecha"></strong>
+                            </div>
+
+                            <div>
+                                <span>Horario</span>
+                                <strong id="final-horario"></strong>
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="nuevo-turno"
+                            class="btn-turno btn-principal">
+
+                            Reservar otro turno
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+
+    <div class="footer-contenedor">
+
+
+        <div class="footer-columna footer-marca">
+
+            <a href="../index.html" class="footer-logo">
+                <img 
+                    src="../img/logo-circulo.png"
+                    alt="Blade House"
+                >
+            </a>
+
+            <p>
+                Estilo, precisión y actitud.
+                Tu barbería de confianza.
+            </p>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>Navegación</h3>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="../index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/turnos.html">
+                        Reservar turno
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/productos.html">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/pedidos.html">
+                        Mis Pedidos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../pages/misTurnos.html">
+                        Mis turnos
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-columna">
+
+            <h3>Contacto</h3>
+
+            <ul class="footer-contacto">
+
+                <li>
+                    <i class="bi bi-geo-alt"></i>
+                    Buenos Aires, Argentina
+                </li>
+
+                <li>
+                    <i class="bi bi-telephone"></i>
+                    +54 11 1234-5678
+                </li>
+
+                <li>
+                    <i class="bi bi-envelope"></i>
+                    contacto@bladehouse.com
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-columna footer-redes">
+
+            <h3>Seguinos</h3>
+
+            <p>
+                Encontranos en nuestras redes.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p> © 2026 Blade House. Todos los derechos reservados.</p>
+
+        <p>Diseñado y desarrollado con dedicación.</p>
+
+    </div>
+
+</footer>
+
+    
+</body>
+</html>

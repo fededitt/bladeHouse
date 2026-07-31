@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cera",
+        "descripcion": "Acabado Natural",
+        "precio": 8500,
+        "categoria": "Ceras",
+        "imagen": "../img/cera.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Pomada Mate",
+        "descripcion": "Fijación fuerte con acabado mate.",
+        "precio": 7000,
+        "categoria": "Pomadas",
+        "imagen": "../img/pomadaMate.png"
+    },
+    { 
+        "id": 3,
+        "nombre": "Pomada Brillo",
+        "descripcion": "Fijacion media con acabado brilloso",
+        "precio": 6500,
+        "categoria": "pomadas",
+        "imagen": "../img/pomadaBrillo.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Shampoo para Barba",
+        "descripcion": "Limpieza e Hidratacion",
+        "precio": 9000,
+        "categoria": "barba",
+        "imagen": "../img/shampoo.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Aceite para Barba",
+        "descripcion": "Nutre e Hidrata",
+        "precio": 7500,
+        "categoria": "barba",
+        "imagen": "../img/aceiteBarba.png"
+    },
+    { 
+        "id": 6,
+        "nombre": "Balsamo",
+        "descripcion": "Hidrata y Suaviza",
+        "precio": 6000,
+        "categoria": "barba",
+        "imagen": "../img/balsamo.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Spray Texturizador",
+        "descripcion": "Volumen y Fijacion",
+        "precio": 5500,
+        "categoria": "pelo",
+        "imagen": "../img/spray.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Peine",
+        "descripcion": "Calidad premium",
+        "precio": 5000,
+        "categoria": "pelo",
+        "imagen": "../img/peine.png"
+    }
+]
