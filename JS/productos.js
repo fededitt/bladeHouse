@@ -30,7 +30,11 @@ const numeroPedido = document.querySelector("#numero-pedido");
 
 const volverTienda = document.querySelector("#volver-tienda");
 
+const filtroCategoria =
+    document.querySelector("#filtro-categoria");
 
+const ordenPrecio =
+    document.querySelector("#orden-precio");
 
 
 
@@ -86,6 +90,63 @@ function mostrarProductos(productos) {
 
     });
 }
+
+function aplicarFiltros() {
+
+    let productosFiltrados = [...productos];
+
+
+    // FILTER
+
+    const categoria =
+        filtroCategoria.value;
+
+
+    if (categoria !== "todas") {
+
+        productosFiltrados =
+            productosFiltrados.filter(producto =>
+                producto.categoria.toLowerCase() ===
+                categoria.toLowerCase()
+            );
+
+    }
+
+
+    // SORT
+
+    if (ordenPrecio.value === "menor") {
+
+        productosFiltrados.sort(
+            (a, b) => a.precio - b.precio
+        );
+
+    }
+
+
+    if (ordenPrecio.value === "mayor") {
+
+        productosFiltrados.sort(
+            (a, b) => b.precio - a.precio
+        );
+
+    }
+
+
+    mostrarProductos(productosFiltrados);
+
+}
+
+filtroCategoria.addEventListener(
+    "change",
+    aplicarFiltros
+);
+
+
+ordenPrecio.addEventListener(
+    "change",
+    aplicarFiltros
+);
 
 function agregarAlCarrito(id) {
 
